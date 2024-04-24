@@ -1,0 +1,276 @@
+/*header*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px 15px 10px;
+  background-color: #512da8;
+}
+.label-header {
+  font-size: 30px;
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.custom-link {
+  text-decoration: none;
+}
+
+.dropdown-header .custom-toggle {
+  background-color: #fff;
+  color: #512da8;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+.custom-menu a {
+  text-decoration: none;
+  color: #512da8;
+  font-weight: bold;
+  animation: transform 2s ease;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.custom-menu a:hover {
+  background-color: #512da8;
+  color: #fff;
+}
+
+.imagen {
+  height: 40px;
+  width: 40px;
+}
+
+.dropdown-header {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.cartWidget-header {
+  margin-right: 20px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.cartWidget-total {
+  position: absolute;
+  top: -18%;
+  left: 60%;
+  color: #2da83d;
+  background: black;
+  padding: 0 3px;
+  border-radius: 50%;
+}
+
+/*ItemListContainer*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  min-height: 270px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card img {
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.card h2 {
+  font-size: 20px;
+  margin-bottom: auto;
+}
+
+.card h3 {
+  font-size: 20px;
+}
+
+.card button {
+  margin-left: 20%;
+  background-color: #512da8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+.card button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.loader {
+  margin-top: 40px;
+  margin-left: 40%;
+  color: #512da8;
+  font-weight: bold;
+}
+
+.container-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 10px 40px;
+  padding: 10px 10px 60px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  align-items: center;
+  position: relative;
+}
+
+.container-detail h2 {
+  font-size: 30px;
+}
+
+.container-detail h3 {
+  font-size: 20px;
+}
+
+.buttons-cart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.buttons-cart button {
+  background-color: #512da8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin-inline: 10px;
+  font-weight: bold;
+}
+
+.buttons-cart label {
+  font-weight: bold;
+  color: #512da8;
+}
+
+/*chechout*/
+.container-checkout {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+.checkout-table {
+  margin-top: 20px;
+  width: 45%;
+}
+
+.table-products {
+  display: flex;
+  flex-direction: column;
+}
+.checkout-table th,
+.checkout-table td {
+  border: 1px solid #b1a1a1;
+  padding: 8px;
+  text-align: left;
+}
+
+.button-checkout {
+  background-color: #512da8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin-inline: 10px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.button-checkout:hover {
+  transform: scale(1.1);
+}
+
+.total-checkout {
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+
+.total-checkout button {
+  background-color: #512da8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin-right: auto;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.total-checkout label {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.aside-checkout {
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.aside-checkout p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-checkout label,
+.form-checkout input {
+  display: block;
+}
+
+.form-checkout label {
+  font-weight: bold;
+}
+
+.checkmail {
+  display: none;
+}
+
+.checkmail.active {
+  display: block;
+  color: red;
+  font-weight: bold;
+  margin: 0;
+}
+
+.form-checkout button {
+  background-color: #512da8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin-right: auto;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.form-checkout button:hover {
+  transform: scale(1.1);
+}
