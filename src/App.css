@@ -165,29 +165,78 @@
   font-weight: bold;
   color: #512da8;
 }
-
-/*chechout*/
 .container-checkout {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
 }
+/*chechout*/
+/*
+
 .checkout-table {
   margin-top: 20px;
-  width: 45%;
+  width: 150px;
+  border-collapse: collapse;
 }
 
 .table-products {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 .checkout-table th,
 .checkout-table td {
   border: 1px solid #b1a1a1;
   padding: 8px;
   text-align: left;
+  vertical-align: middle;
+}
+.table-items {
+  height: 150px;
+}
+.table-heads {
+  height: auto;
+  width: auto;
+}
+*/
+
+/* .container-checkout {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border: 1px solid #b1a1a1;
 }
 
+.checkout-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid red;
+}
+
+.body-cell {
+  border: 1px solid #b1a1a1;
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.first-row {
+  height: auto;
+  border: 1px solid #b1a1a1;
+}
+
+.table-products {
+  border: 1px solid #b1a1a1;
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  border: 1px solid #b1a1a1;
+  width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+/* height: 50px;
+  margin-right: 10px;
+} */
+/* 
 .button-checkout {
   background-color: #512da8;
   color: #fff;
@@ -225,10 +274,11 @@
 .total-checkout label {
   font-weight: bold;
   font-size: 30px;
-}
+} */
 
 .aside-checkout {
-  padding: 20px;
+  margin: 20px;
+  padding: 10px;
   width: 45%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   border-radius: 10px;
@@ -273,4 +323,111 @@
 
 .form-checkout button:hover {
   transform: scale(1.1);
+}
+
+/*checkout*/
+.main-container {
+  display: flex;
+}
+
+.section-container {
+  width: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  height: 470px;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 5px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title-table-container {
+  font-size: 20px;
+  width: 20%;
+  text-align: center;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  height: 370px;
+
+  overflow: scroll;
+}
+
+.card-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+  border: 1px solid #512da8;
+}
+.card-image-apart {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-image-apart img {
+  width: 100%;
+}
+
+.title-category {
+  width: 20%;
+  font-size: 20px;
+  text-align: center;
+}
+.card-product button {
+  width: 20%;
+  background-color: #512da8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+
+  font-weight: bold;
+  font-size: 15px;
+  height: 50px;
+}
+
+.title-container {
+  display: flex;
+}
+.title-product-h2 {
+  font-size: 16px;
+  width: 100%;
+
+  margin: 5px 0 0 0;
+}
+
+.total-checkout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 7px;
+  margin-right: 40px;
+}
+
+.total-checkout button {
+  width: 30%;
+  background-color: #512da8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.total-checkout label {
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 2px solid green;
+}
+.retorno-temprano {
+  padding: 20px;
 }

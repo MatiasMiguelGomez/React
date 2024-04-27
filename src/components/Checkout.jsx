@@ -42,67 +42,70 @@ export const Checkout = () => {
           }
         });
       }
+
+      clearCart();
     }
   };
 
+  console.log(cart);
   if (cart.length === 0) {
     return (
-      <h2>Tu carrito esta vacio, te invitamos a gastar dinero para llenarlo</h2>
+      <h2 className='retorno-temprano'>
+        Tu carrito esta vacio, te invitamos a gastar dinero para llenarlo
+      </h2>
     );
   }
   return (
-    <>
-      <main className='container-checkout'>
-        <table className='checkout-table'>
-          <thead>
-            <tr>
-              <th>Producto</th>
-              <th>Precio</th>
-              <th>Cantidad</th>
-              <th>Subtotal</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cart.map(item => (
-              <tr key={item.id}>
-                <td className='table-products'>
-                  <img src={item.img} alt={`nombre de ${item.product}`} />
-                  <span>{item.product}</span>
-                </td>
-                <td>${item.price}</td>
-                <td>{item.quantity}</td>
-                <td>${subTotalCalc(item.quantity, item.price)}</td>
-                <td>
-                  <button
-                    className='button-checkout'
-                    onClick={() => restCart(item.id)}
-                  >
-                    Restar Item
-                  </button>
-                </td>
-              </tr>
+    <main className='main-container'>
+      <section className='section-container'>
+        <div className='cards-container'>
+          <span className='title-container'>
+            <h2 className='title-table-container'>Producto</h2>
+            <h2 className='title-table-container'>Cantidad</h2>
+            <h2 className='title-table-container'>Precio</h2>
+            <h2 className='title-table-container'>Subtotal</h2>
+            <h2 className='title-table-container'>Quitar unidad</h2>
+          </span>
+          <div className='card-list'>
+            {cart.map(product => (
+              <div className='card-product' key={product.id}>
+                <span className='card-image-apart'>
+                  <img src={product.img} alt={`Imagen de ${product.name}`} />
+                  <h2 className='title-product-h2'>{product.product}</h2>
+                </span>
+                <h2 className='title-category'>x{product.quantity}ud</h2>
+                <h2 className='title-category'>${product.price}</h2>
+                <button
+                  onClick={() => {
+                    restCart(product.id);
+                  }}
+                >
+                  Quitar unidad
+                </button>
+                <h2 className='title-category'>
+                  ${subTotalCalc(product.quantity, product.price)}
+                </h2>
+              </div>
             ))}
-          </tbody>
-        </table>
-
-        <aside className='aside-checkout'>
-          <p>
-            Necesitas registrarte para poder efectuar la compra, por favor
-            ingresa tus datos en el formulario
-          </p>
-          <Formulario
-            handleData={handleData}
-            person={person}
-            error={error}
-            handleSubmit={handleSubmit}
-          />
-        </aside>
-      </main>
-      <div className='total-checkout'>
-        <button onClick={clearCart}>Limpiar carrito</button>
-        <label htmlFor=''>Total:</label>
-        <label htmlFor=''>${totalCalc(cart)}</label>
-      </div>
-    </>
+          </div>
+        </div>
+        <div className='total-checkout'>
+          <button onClick={clearCart}>Limpiar carrito</button>
+          <label htmlFor=''>Total: ${totalCalc(cart)}</label>
+        </div>
+      </section>
+      <aside className='aside-checkout'>
+        <p>
+          Necesitas registrarte para poder efectuar la compra, por favor ingresa
+          tus datos en el formulario
+        </p>
+        <Formulario
+          handleData={handleData}
+          person={person}
+          error={error}
+          handleSubmit={handleSubmit}
+        />
+      </aside>
+    </main>
   );
 };
